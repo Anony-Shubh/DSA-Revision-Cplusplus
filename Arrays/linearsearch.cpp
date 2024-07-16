@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-int linearsearch(int *arr, int n, int key)
+
+int linearSearch(int arr[], int n, int key)
 {
     for(int i=0;i<n;i++)
     {
@@ -9,12 +10,23 @@ int linearsearch(int *arr, int n, int key)
             return i;
         }
     }
-    return -1;
+        return -1;
 }
+
 int main()
 {
-    int arr[]={1,2,3,4,5,6};
-    int n = sizeof(arr)/sizeof(int);
-    cout<<linearsearch(arr, n, 4);
+    int length;
+    cout<<"Enter the length of an array: ";
+    cin>>length;
+    int a[length];
+    for(int i=0;i<length;i++)
+    {
+        cin>>a[i];
+    }
+    int x;
+    cout<<"Enter the number among the array which you want to find: ";
+    cin>>x;
+    cout<<linearSearch(a, length, x);
+
     return 0;
 }
