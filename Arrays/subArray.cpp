@@ -7,7 +7,6 @@ void printArray(int *arr, int n)
     {
         for(int end=start;end<n;end++)
         {
-            
             int currSum = 0;
             // cout<<start<<", "<<end;
             for(int i=start;i<end;i++)
