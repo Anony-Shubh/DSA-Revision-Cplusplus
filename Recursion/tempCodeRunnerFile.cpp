@@ -1,0 +1,1 @@
+cout<<increasing(st, end);
