@@ -23,7 +23,7 @@ int FO(vector<int> arr, int i, int target)
     if(i==n)
     {
         return -1;
-    }    
+    }
     int idxFound = FO(arr, i+1, target);
     if(idxFound==-1 && arr[i]==target)
     {
