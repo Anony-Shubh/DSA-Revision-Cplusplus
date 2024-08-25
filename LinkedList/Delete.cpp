@@ -13,6 +13,15 @@ class Node
         data = val;
         next = NULL;
     }
+    ~Node()
+    {
+        cout<<"Node destructor called"<<data<<endl;
+        if(next!=NULL)
+        {
+            delete next;
+            next = NULL;
+        }
+    }
 
 };
 
@@ -27,6 +36,15 @@ class List
     {
         head = NULL;
         tail = NULL;
+    }
+    ~List()
+    {
+        if(head != NULL)
+        {
+            cout<<"List Destructor called"<<endl;
+            delete head;
+            head = NULL;
+        }
     }
     void push_front(int val)
     {
